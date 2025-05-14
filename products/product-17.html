@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tas Wanita 17</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="../assets/img/logo.png" alt="RZMART Logo" style="height:50px;">
+    <h1>RZMART</h1>
+  </header>
+  <nav>
+    <div>
+      <a href="../index.html">Home</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x300?text=Tas+17" alt="Tas Wanita 17" />
+      <h3>Tas Wanita 17</h3>
+      <p>Rp37000</p>
+      <p>Deskripsi singkat tas wanita ke-17 yang elegan dan stylish.</p>
+      <button onclick="document.getElementById('checkout').style.display='block'">Beli Sekarang</button>
+    </div>
+  </div>
+
+  <div id="checkout" style="display:none;padding:20px;">
+    <h2>Form Checkout</h2>
+    <form action="https://wa.me/6285165597616" method="get" onsubmit="return checkoutMessage(this);">
+      <label>Nama:</label><br><input type="text" name="nama" required><br>
+      <label>Alamat:</label><br><textarea name="alamat" required></textarea><br>
+      <label>Provinsi/Kota:</label><br><input type="text" name="lokasi" required><br>
+      <label>Pembayaran:</label><br>
+      <select name="metode">
+        <option value="Transfer">Transfer</option>
+        <option value="COD">COD</option>
+        <option value="E-Wallet">E-Wallet</option>
+      </select><br><br>
+      <input type="submit" value="Kirim ke WhatsApp">
+    </form>
+  </div>
+
+  <script>
+    function checkoutMessage(form) {
+      const nama = form.nama.value;
+      const alamat = form.alamat.value;
+      const lokasi = form.lokasi.value;
+      const metode = form.metode.value;
+      const produk = "Tas Wanita 17";
+      const harga = "Rp37000";
+      const pesan = `Halo RZMART,%0ASaya ingin memesan:%0AProduk: ${produk}%0AHarga: ${harga}%0ANama: ${nama}%0AAlamat: ${alamat}%0ALokasi: ${lokasi}%0AMetode Pembayaran: ${metode}`;
+      form.action = `https://wa.me/6285165597616?text=${pesan}`;
+      return true;
+    }
+  </script>
+
+  <a href="https://wa.me/6285165597616" class="whatsapp-float">💬</a>
+</body>
+</html>
