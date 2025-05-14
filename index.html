@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RZMart - Toko Tas Wanita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">👜 RZMart</div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Kategori</a>
+      <a href="#">Admin Panel</a>
+      <a href="#">Checkout (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Selamat datang di RZMart</h1>
+    <p>Tas wanita elegan harga terjangkau</p>
+  </section>
+
+  <section class="products" id="product-list">
+    <!-- Produk ditambahkan melalui JavaScript -->
+  </section>
+<!-- Checkout Section -->
+<section class="checkout" style="padding: 2rem; background: #f1f1f1;">
+  <h2>Checkout</h2>
+  <form id="checkout-form" onsubmit="sendOrder(event)">
+    <label>Nama Lengkap:</label><br>
+    <input type="text" id="buyer-name" required><br><br>
+
+    <label>No. WhatsApp:</label><br>
+    <input type="text" id="buyer-wa" required><br><br>
+
+    <label>Alamat Pengiriman:</label><br>
+    <textarea id="buyer-address" required></textarea><br><br>
+
+    <label>Kota/Provinsi:</label><br>
+    <input type="text" id="buyer-location" required><br><br>
+
+    <label>Metode Pembayaran:</label><br>
+    <select id="buyer-payment">
+      <option value="Transfer">Transfer Bank</option>
+      <option value="COD">COD</option>
+      <option value="E-Wallet">E-Wallet</option>
+    </select><br><br>
+
+    <button type="submit">Kirim via WhatsApp</button>
+  </form>
+</section>
+
+<!-- Admin Panel Section -->
+<section class="admin-panel" style="padding: 2rem;">
+  <h2>Admin Panel (Dummy)</h2>
+  <p>Ini hanya contoh tampilan. Tambah/edit produk bisa diatur di database dinamis (jika pakai backend).</p>
+</section>
+
+  <footer>
+    <p>&copy; 2025 RZMart. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/6281234567890" class="whatsapp-float" title="Chat via WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
